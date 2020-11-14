@@ -6,7 +6,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header_logo-wrapper">
+      <div class="page-header__logo-wrapper">
         <a class="page-header__logo">
           <img
             src="https://via.placeholder.com/86x35"
@@ -47,7 +47,10 @@
                   width="21"
                   height="18"
                   alt="Иконка корзины"
-                />Корзина: пока пуста</a
+                /><span
+                  class="interactive-list__cart-text interactive-list__cart-text--empty"
+                  >Корзина: пока пуста</span
+                ></a
               >
             </li>
           </ul>
@@ -56,9 +59,7 @@
     </header>
     <main class="page-main">
       <header class="main-header">
-        <h1 class="main-header__head-text">
-          Милые штуки ручной работы для дома
-        </h1>
+        <h1 class="main-header__title">Милые штуки ручной работы для дома</h1>
         <section class="main-header-products">
           <h2 class="visually-hidden">Наши продукты</h2>
           <div class="main-header-products__link-wrapper">
@@ -84,48 +85,44 @@
         </section>
       </header>
       <section class="product">
-        <div class="product__item-header-wrapper">
-          <h2 class="product__item-header">Вязаные корзинки</h2>
-          <span class="product__item-header-week-product-label"
-            >ТОВАР НЕДЕЛИ</span
-          >
+        <div class="product__title-wrapper">
+          <h2 class="product__title">Вязаные корзинки</h2>
+          <span class="product__label">товар недели</span>
         </div>
-        <div class="product__item-wrapper">
-          <p class="product__item-description">
+        <div class="product__info">
+          <p class="product__description">
             Экологически чистая пряжа, ручная работа. Доступны в шести
             расцветках, и трех размерах.
           </p>
           <dl class="product__stats">
             <div class="product__stats-item">
-              <dt class="product__stats-item-feature">Цвет:</dt>
-              <dd class="product__stats-item-feature-description">
-                «Тиффани»/серый
-              </dd>
+              <dt>Цвет:</dt>
+              <dd>«Тиффани»/серый</dd>
             </div>
             <div class="product__stats-item">
-              <dt class="product__stats-item-feature">Диаметр:</dt>
-              <dd class="product__stats-item-feature-description">25 см</dd>
+              <dt>Диаметр:</dt>
+              <dd>25 см</dd>
             </div>
             <div class="product__stats-item">
-              <dt class="product__stats-item-feature">Высота:</dt>
-              <dd class="product__stats-item-feature-description">15 см</dd>
+              <dt>Высота:</dt>
+              <dd>15 см</dd>
             </div>
           </dl>
         </div>
         <img
-          class="product__item-photo"
+          class="product__photo"
           src="https://via.placeholder.com/260x315"
           width="260"
           height="315"
           alt="Фото товара"
         />
         <div class="product__order-wrapper">
-          <span class="product__order-price">Цена: 990 руб.</span>
-          <button class="product__order-button" type="button">ЗАКАЗАТЬ</button>
+          <span class="product__price">Цена: 990 руб.</span>
+          <button class="product__button button" type="button">заказать</button>
         </div>
       </section>
       <section class="about-us">
-        <h2 class="about-us__header">Коротко о нас:</h2>
+        <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us_features-list">
           <li class="about-us__feature-item">Экологически чистые материалы</li>
           <li class="about-us__feature-item">
@@ -146,22 +143,27 @@
         </ul>
       </section>
       <section class="reviews">
-        <h2 class="reviews__header">Отзывы</h2>
-        <p class="reviews__description">
-          Я молодая мама, но всё равно фотографии не набирали и близко такого
-          количества лайков, как у популярных инстамамочек. В отчаянии, я
-          накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали
-          более стильными, а также набирают больше лайков!
-        </p>
-        <p class="reviews__author">Анастасия Красильникова @misssssiskras</p>
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__item">
+          <p class="reviews__comment">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого
+            количества лайков, как у популярных инстамамочек. В отчаянии, я
+            накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали
+            более стильными, а также набирают больше лайков!
+          </p>
+          <span class="reviews__author">Анастасия Красильникова</span>
+          <span class="reviews__nickname">@misssssiskras</span>
+        </div>
         <div class="reviews__nav-buttons-wrapper">
           <button class="reviews__prev-button" type="button">Назад</button>
           <button class="reviews__next-button" type="button">Вперед</button>
         </div>
-        <button class="reviews__write-to-button" type="button">Написать</button>
+        <button class="reviews__write-to-button button" type="button">
+          Написать
+        </button>
       </section>
       <section class="contacts">
-        <h2 class="contacts__header">Контакты</h2>
+        <h2 class="contacts__title">Контакты</h2>
         <dl class="contacts__info">
           <div class="contacts__email-wrapper">
             <dt>e-mail:</dt>
@@ -179,7 +181,7 @@
           height="455"
           alt="Схема проезда"
         />
-        <button class="contacts__write-to-us" type="button">
+        <button class="contacts__write-to-us button" type="button">
           Напишите нам
         </button>
       </section>
@@ -197,25 +199,26 @@
       <div class="social-network__wrapper">
         <ul class="social-network__list">
           <li class="social-network__item">
-            <a class="social-network__item-instagram">instagram</a>
+            <a class="social-network__item--instagram">instagram</a>
           </li>
           <li class="social-network__item">
-            <a class="social-network__item-facebook">facebook</a>
+            <a class="social-network__item--facebook">facebook</a>
           </li>
           <li class="social-network__item">
-            <a class="social-network__item-twitter">twitter</a>
+            <a class="social-network__item--twitter">twitter</a>
           </li>
         </ul>
       </div>
       <div class="designed-by__wrapper">
         <span class="designed-by__text">Разработано</span>
-        <img
-          class="designed-by__logo"
-          src="https://via.placeholder.com/27x35"
-          width="27"
-          height="35"
-          alt="Логотип веб-студии"
-        />
+        <a class="designed-by__logo" href="#">
+          <img
+            src="https://via.placeholder.com/27x35"
+            width="27"
+            height="35"
+            alt="Логотип веб-студии"
+          />
+        </a>
       </div>
     </footer>
   </body>
