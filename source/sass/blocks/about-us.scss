@@ -10,10 +10,7 @@
 }
 
 .about-us__features-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include ul-zeroing;
   font-weight: 700;
   font-size: 17px;
-  line-height: 20px;
 }

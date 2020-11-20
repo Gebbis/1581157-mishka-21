@@ -3,7 +3,7 @@
   padding: 0 30px;
   margin-top: 31px;
   padding-bottom: 36px;
-  color: #444444;
+  color: $light-black;
 
   &::before {
     position: absolute;
@@ -12,7 +12,7 @@
     height: 6px;
     bottom: 0;
     left: 0;
-    background-image: url("../../img/zigzag-line.svg");
+    background-image: url("../img/zigzag-line.svg");
   }
 }
 
@@ -20,19 +20,17 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  color: #000000;
+  color: $black;
 }
 
 .product__label {
   font-weight: 700;
   font-size: 17px;
-  line-height: 20px;
   text-transform: uppercase;
-  color: #63d1bb;
+  color: $light-green;
 }
 
 .product__info {
-  font-size: 15px;
   line-height: 24px;
 }
 
@@ -44,11 +42,4 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-}
-
-.product__button {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  text-transform: uppercase;
 }

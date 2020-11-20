@@ -18,14 +18,10 @@
 .contacts__info {
   font-size: 14px;
   line-height: 30px;
-  color: #444444;
+  color: $light-black;
 }
 
 .contacts__write-to-us {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  text-transform: uppercase;
   text-decoration: none;
-  color: #444444;
+  color: $light-black;
 }
