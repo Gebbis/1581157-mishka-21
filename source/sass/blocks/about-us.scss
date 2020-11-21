@@ -10,7 +10,7 @@
 }
 
 .about-us__features-list {
-  @include ul-zeroing;
+  @include list-zeroing;
   font-weight: 700;
   font-size: 17px;
 }
