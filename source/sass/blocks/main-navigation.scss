@@ -1,0 +1,10 @@
+.main-navigation {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  padding-left: 76px;
+}
+
+.main-navigation__list {
+  @include list-zeroing;
+}

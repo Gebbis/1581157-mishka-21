@@ -1,0 +1,45 @@
+.product {
+  position: relative;
+  padding: 0 30px;
+  margin-top: 31px;
+  padding-bottom: 36px;
+  color: $light-black;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/zigzag-line.svg");
+  }
+}
+
+.product__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: $black;
+}
+
+.product__label {
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: $light-green;
+}
+
+.product__info {
+  line-height: 24px;
+}
+
+.product__stats {
+  line-height: 20px;
+}
+
+.product__price {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}

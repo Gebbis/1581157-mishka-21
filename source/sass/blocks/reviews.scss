@@ -1,0 +1,43 @@
+.reviews {
+  position: relative;
+  padding: 0 30px;
+  margin-top: 58px;
+  padding-bottom: 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/zigzag-line.svg");
+  }
+}
+
+.reviews__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.reviews__comment {
+  line-height: 30px;
+  color: $light-black;
+}
+
+.reviews__author {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.reviews__nickname {
+  font-size: 17px;
+  line-height: 30px;
+  color: $light-black;
+}
+
+.reviews__write-to-button {
+  color: $light-black;
+}
