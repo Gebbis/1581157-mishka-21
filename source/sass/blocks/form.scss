@@ -1,0 +1,58 @@
+.form {
+  padding: 0 30px;
+  margin-bottom: 55px;
+}
+
+.form__annotation {
+  font-size: 13px;
+  line-height: 24px;
+  color: $light-black;
+}
+
+.form__radio-list,
+.form__checkbox-list {
+  @include list-zeroing;
+}
+
+.form__fieldset {
+  font-size: 17px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__fieldset legend,
+.form__text--phone,
+.form__text--email,
+.form__text--textarea {
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $light-green;
+}
+
+.form__text,
+.form__checkbox-label,
+.form__radio {
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.form__text-input,
+.form__textarea {
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.form__note {
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-black;
+}
+
+.form__submit {
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $light-black;
+}
