@@ -3,3 +3,9 @@
   font-size: 19px;
   line-height: 18px;
 }
+
+@media (min-width: $tablet-width) {
+  .designed-by__text {
+    grid-column: 3 / -1;
+  }
+}

@@ -2,9 +2,47 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  padding-left: 76px;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .main-navigation__list {
   @include list-zeroing;
+}
+
+.main-navigation__toggle {
+  margin-left: 210px;
+  grid-row: 1 / 2;
+}
+
+.main-navigation__wrapper {
+  display: none;
+  grid-row: 2 / -1;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__wrapper {
+    display: grid;
+    grid-template-columns: 340px auto 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto auto;
+  }
 }

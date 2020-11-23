@@ -1,3 +1,9 @@
 .social-network {
   @include list-zeroing;
 }
+
+@media (min-width: $tablet-width) {
+  .social-network {
+    grid-column: 2 / 3;
+  }
+}

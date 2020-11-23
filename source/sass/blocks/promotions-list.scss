@@ -1,0 +1,17 @@
+.promotions-list {
+  display: none;
+}
+
+.promotions-list__link {
+  text-decoration: none;
+  color: $black;
+}
+
+@media (min-width: $desktop-width) {
+  .promotions-list {
+    display: flex;
+    flex-direction: row;
+    grid-row: 2 / -1;
+    grid-column: 1 / 3;
+  }
+}

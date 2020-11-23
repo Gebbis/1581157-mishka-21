@@ -1,5 +1,18 @@
+.products {
+  min-height: 489px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .products__title {
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .products {
+    min-height: 705px;
+  }
 }

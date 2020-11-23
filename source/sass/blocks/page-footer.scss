@@ -1,5 +1,18 @@
 .page-footer {
+  min-height: 143px;
   padding: 0 69px;
   margin-top: 39px;
   background-color: $light-gray;
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, auto);
+  }
 }
