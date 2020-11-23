@@ -1,0 +1,22 @@
+.production {
+  padding: 0 30px;
+  margin-top: 30px;
+  margin-bottom: 58px;
+}
+
+.production__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.production__description {
+  font-size: 13px;
+  line-height: 24px;
+  color: $light-black;
+}
+
+.production__submit {
+  line-height: 16px;
+  color: $light-black;
+}
