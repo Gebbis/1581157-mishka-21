@@ -21,14 +21,23 @@
   margin: 0;
 }
 
-.form__fieldset legend,
-.form__text--phone,
-.form__text--email,
-.form__text--textarea {
+.form__group-title {
   line-height: 16px;
   font-weight: 700;
   text-transform: uppercase;
   color: $light-green;
+}
+
+.form__text {
+
+  &--phone,
+  &--email,
+  &--textarea {
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $light-green;
+  }
 }
 
 .form__text,
