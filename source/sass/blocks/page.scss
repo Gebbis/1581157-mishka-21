@@ -11,5 +11,12 @@
 @media (min-width: $tablet-width) {
   .page__body {
     padding: 0 50px;
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__body {
+    width: $desktop-width;
   }
 }

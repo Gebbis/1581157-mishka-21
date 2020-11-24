@@ -22,9 +22,11 @@
 .contacts__info {
   font-size: 14px;
   line-height: 30px;
+  width: 260px;
   color: $light-black;
   display: grid;
   grid-template-rows: auto 1fr;
+  align-self: center;
 }
 
 .contacts__email-wrapper {
@@ -41,9 +43,18 @@
   grid-template-columns: auto 1fr;
 }
 
+.contacts__map {
+  width: 100%;
+}
+
 .contacts__write-to-us {
   text-decoration: none;
   color: $light-black;
+  width: 260px;
+  height: 52px;
+  align-self: center;
+  border: 2px solid $light-black;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -51,9 +62,16 @@
     min-height: 927px;
   }
 
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
   .contacts__info {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    width: 640px;
+    font-size: 17px;
   }
 
   .contacts__email-wrapper {
@@ -63,6 +81,15 @@
   .contacts__address-wrapper {
     @include second-column;
     @include first-row;
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 457px;
+  }
+
+  .contacts__write-to-us {
+    width: 230px;
   }
 }
 
@@ -78,12 +105,15 @@
   .contacts__title {
     @include first-column;
     @include first-row;
+    font-size: 53px;
+    line-height: 57px;
   }
 
   .contacts__info {
-    min-height: 150px;
     @include first-column;
+    min-height: 150px;
     grid-row: 2 / 3;
+    width: 300px;
   }
 
   .contacts__email-wrapper {
@@ -104,5 +134,7 @@
   .contacts__map {
     @include second-column;
     @include all-rows;
+    width: 527px;
+    height: 457px;
   }
 }

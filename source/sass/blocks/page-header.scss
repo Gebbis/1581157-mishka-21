@@ -15,14 +15,14 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    min-height: 100px;
     @include header-grid-tablet;
+    min-height: 100px;
   }
 
   .page-header__offer {
-    display: block;
     @include second-row;
     @include last-column;
+    display: block;
     margin-left: auto;
   }
 }

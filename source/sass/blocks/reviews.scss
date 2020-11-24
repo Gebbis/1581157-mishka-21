@@ -30,6 +30,12 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+  margin: 0;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__comment {
@@ -51,6 +57,8 @@
 
 .reviews__write-to-button {
   color: $light-black;
+  width: 260px;
+  height: 52px;
 }
 
 @media (min-width: $tablet-width) {
@@ -62,15 +70,27 @@
   .reviews__title {
     @include first-row;
     @include first-column;
+    font-size: 43px;
+    line-height: 50px;
   }
 
   .reviews__item {
     @include second-row;
   }
 
+  .reviews__comment {
+    font-size: 17px;
+  }
+
+  .reviews__author {
+    font-size: 18px;
+  }
+
   .reviews__write-to-button {
     @include first-row;
     @include second-column;
+    width: 175px;
+    margin-left: auto;
   }
 
   .reviews__nav-buttons-wrapper {
@@ -78,5 +98,16 @@
     @include second-column;
     margin-top: auto;
     margin-left: auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .reviews__author {
+    font-size: 17px;
   }
 }

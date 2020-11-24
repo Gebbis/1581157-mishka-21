@@ -5,14 +5,16 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
-    grid-column: 1 / 3;
     @include second-row;
+    font-size: 15px;
+    grid-column: 1 / 3;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list {
     @include first-row;
+    font-size: 17px;
     grid-column: 1 / 3;
   }
 }

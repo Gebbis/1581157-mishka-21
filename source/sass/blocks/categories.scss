@@ -4,13 +4,16 @@
 }
 
 .categories__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   text-decoration: none;
-  padding-left: 30px;
   color: $white;
   flex-grow: 1;
+  padding: 18px 30px;
 
   &--interior {
     background-color: $light-green;
@@ -23,9 +26,11 @@
 
 
 @media (min-width: $tablet-width) {
-
   .categories__link {
     width: 334px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 26px 36px;
   }
 
   .categories__link-wrapper {
@@ -35,7 +40,6 @@
 
 
 @media (min-width: $desktop-width) {
-
   .categories__link {
     width: 525px;
   }
