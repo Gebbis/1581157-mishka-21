@@ -18,5 +18,9 @@
 @media (min-width: $desktop-width) {
   .logo {
     grid-column: 3 / 4;
+
+    &--footer {
+      @include first-column;
+    }
   }
 }
