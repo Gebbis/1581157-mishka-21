@@ -12,7 +12,7 @@
   &::before {
     position: absolute;
     content: "";
-    width: $mobile-width;
+    width: 100%;
     height: 6px;
     bottom: 0;
     left: 0;
@@ -70,10 +70,6 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(3, auto);
-
-    &::before {
-      width: $tablet-width;
-    }
   }
 
   .product__title-wrapper {
@@ -103,9 +99,6 @@
   .product {
     min-height: 702px;
 
-    &::before {
-      width: $desktop-width;
-    }
   }
 
   .product__title-wrapper {

@@ -7,13 +7,12 @@
   .site-list {
     grid-column: 1 / 3;
     @include second-row;
-    display: flex;
-    flex-direction: row;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list {
-    display: none;
+    @include first-row;
+    grid-column: 1 / 3;
   }
 }

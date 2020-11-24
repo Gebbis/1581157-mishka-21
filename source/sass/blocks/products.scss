@@ -3,12 +3,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url(../../img/products-background.jpg);
 }
 
 .products__title {
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {

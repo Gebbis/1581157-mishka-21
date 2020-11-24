@@ -23,7 +23,20 @@
 
 
 @media (min-width: $tablet-width) {
+
+  .categories__link {
+    width: 334px;
+  }
+
   .categories__link-wrapper {
     flex-direction: row;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .categories__link {
+    width: 525px;
   }
 }

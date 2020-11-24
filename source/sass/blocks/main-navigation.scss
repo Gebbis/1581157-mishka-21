@@ -2,19 +2,24 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
+  @include all-rows;
+  @include all-columns;
   display: grid;
   grid-template-rows: auto 1fr;
 }
 
 .main-navigation__list {
   @include list-zeroing;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .main-navigation__toggle {
-  margin-left: 210px;
+  margin-left: auto;
   @include first-row;
+  width: 20px;
+  height: 14px;
 }
 
 .main-navigation__wrapper {
@@ -28,16 +33,13 @@
 
   .main-navigation__wrapper {
     display: grid;
-    grid-template-columns: 340px auto 1fr;
-    grid-template-rows: 1fr auto;
+    @include header-grid-tablet;
     @include second-row;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-navigation__wrapper {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: auto auto;
+    @include header-grid-desktop;
   }
 }

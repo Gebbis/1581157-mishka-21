@@ -10,7 +10,6 @@
 @media (min-width: $desktop-width) {
   .promotions-list {
     display: flex;
-    flex-direction: row;
     @include second-row;
     grid-column: 1 / 3;
   }
