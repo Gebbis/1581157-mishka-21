@@ -8,3 +8,37 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+// Grid's rows and columns
+
+@mixin first-row {
+  grid-row: 1 / 2;
+}
+
+@mixin second-row {
+  grid-row: 2 / 3;
+}
+
+@mixin last-row {
+  grid-row: -2 / -1;
+}
+
+@mixin all-rows {
+  grid-row: 1 / -1;
+}
+
+@mixin first-column {
+  grid-column: 1 / 2;
+}
+
+@mixin second-column {
+  grid-column: 2 / 3;
+}
+
+@mixin last-column {
+  grid-column: -2 / -1;
+}
+
+@mixin all-columns {
+  grid-column: 1 / -1;
+}

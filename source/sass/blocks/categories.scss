@@ -10,6 +10,7 @@
   text-decoration: none;
   padding-left: 30px;
   color: $white;
+  flex-grow: 1;
 
   &--interior {
     background-color: $light-green;

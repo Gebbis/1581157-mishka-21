@@ -11,7 +11,7 @@
   .promotions-list {
     display: flex;
     flex-direction: row;
-    grid-row: 2 / -1;
+    @include second-row;
     grid-column: 1 / 3;
   }
 }

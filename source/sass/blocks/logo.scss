@@ -1,18 +1,15 @@
 .logo {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
+  @include first-row;
+  @include first-column;
 
-  &--hidden {
+  &--footer {
     display: none;
   }
 }
 
 @media (min-width: $tablet-width) {
   .logo {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-
-    &--hidden {
+    &--footer {
       display: block;
     }
   }
@@ -20,10 +17,6 @@
 
 @media (min-width: $desktop-width) {
   .logo {
-    grid-column: 3 / 4;
-  }
-
-  .logo--hidden {
-    grid-column: 1 / 2;
+    @include first-column;
   }
 }

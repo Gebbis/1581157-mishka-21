@@ -1,0 +1,26 @@
+.item {
+  margin-top: 30px;
+}
+
+.item__title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.item__title-link {
+  text-decoration: none;
+  color: $black;
+}
+
+.item__description {
+  font-size: 13px;
+  line-height: 30px;
+  color: $light-black
+}
+
+.item__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+}

@@ -23,7 +23,7 @@
 .reviews__item,
 .reviews__nav-buttons-wrapper,
 .reviews__write-to-button {
-  grid-column: 1 / -1;
+  @include all-columns;
 }
 
 .reviews__title {
@@ -65,30 +65,31 @@
   }
 
   .reviews__title {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
+    @include first-row;
+    @include first-column;
   }
 
   .reviews__item {
-    grid-row: 2 / -1;
-    grid-column: 1 / -1;
+    @include second-row;
   }
 
   .reviews__write-to-button {
-    grid-row: 1 / 2;
-    grid-column: 2 / -1;
+    @include first-row;
+    @include second-column;
   }
 
   .reviews__nav-buttons-wrapper {
-    grid-row: -2 / -1;
-    grid-column: 2 / -1;
+    @include second-row;
+    @include second-column;
     margin-top: auto;
     margin-left: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .reviews::before {
-    width: $desktop-width;
+  .reviews {
+    &::before {
+      width: $desktop-width;
+    }
   }
 }

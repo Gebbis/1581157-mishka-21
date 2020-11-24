@@ -5,7 +5,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .designed-by__text {
-    grid-column: 3 / -1;
+  .designed-by {
+    @include last-column;
   }
 }

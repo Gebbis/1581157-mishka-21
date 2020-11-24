@@ -77,25 +77,25 @@
   }
 
   .product__title-wrapper {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
+    @include first-row;
+    @include all-columns;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .product__info {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
+    @include second-row;
+    @include first-column;
   }
 
   .product__order-wrapper {
-    grid-row: -2 / -1;
-    grid-column: 1 / 2;
+    @include last-row;
+    @include first-column;
   }
 
   .product__photo {
     grid-row: 2 / -1;
-    grid-column: 2 / -1;
+    @include second-column;
   }
 }
 

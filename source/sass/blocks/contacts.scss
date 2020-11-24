@@ -28,11 +28,11 @@
 }
 
 .contacts__email-wrapper {
-  grid-row: 1 / 2;
+  @include first-row;
 }
 
 .contacts__address-wrapper {
-  grid-row: 2 / -1;
+  @include second-row;
 }
 
 .contacts__email-wrapper,
@@ -57,13 +57,12 @@
   }
 
   .contacts__email-wrapper {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    @include first-column;
   }
 
   .contacts__address-wrapper {
-    grid-column: 2 / -1;
-    grid-row: 1 / 2;
+    @include second-column;
+    @include first-row;
   }
 }
 
@@ -77,35 +76,35 @@
   }
 
   .contacts__title {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    @include first-column;
+    @include first-row;
   }
 
   .contacts__info {
     min-height: 150px;
-    grid-column: 1 / 2;
+    @include first-column;
     grid-row: 2 / 3;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
   }
 
   .contacts__email-wrapper {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
+    @include all-columns;
+    @include first-row;
   }
 
   .contacts__address-wrapper {
-    grid-column: 1 / -1;
-    grid-row: 2 / -1;
+    @include all-columns;
+    @include second-row;
   }
 
   .contacts__write-to-us {
-    grid-column: 1 / 2;
-    grid-row: -2 / -1;
+    @include first-column;
+    @include last-row;
   }
 
   .contacts__map {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
+    @include second-column;
+    @include all-rows;
   }
 }
