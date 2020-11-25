@@ -84,7 +84,6 @@
   }
 
   .contacts__map {
-    width: 768px;
     height: 457px;
   }
 
@@ -100,6 +99,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
+    padding: 0 50px;
   }
 
   .contacts__title {

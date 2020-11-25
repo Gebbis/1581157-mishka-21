@@ -65,6 +65,7 @@
   .reviews {
     min-height: 407px;
     grid-template-rows: min-content min-content;
+    padding: 0 50px;
   }
 
   .reviews__title {
@@ -101,7 +102,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
