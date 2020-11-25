@@ -1,10 +1,11 @@
 .product {
+  @include container;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   min-height: 755px;
   position: relative;
-  padding: 0 30px;
   margin-top: 31px;
   padding-bottom: 36px;
   color: $light-black;
@@ -76,6 +77,7 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(3, auto);
+    column-gap: 42px;
   }
 
   .product__title-wrapper {
@@ -132,6 +134,13 @@
 @media (min-width: $desktop-width) {
   .product {
     min-height: 702px;
+    padding-right: 50px;
+    box-sizing: unset;
+  }
+
+  .product__info,
+  .product__order-wrapper {
+    @include big-left-padding;
   }
 
   .product__title-wrapper {

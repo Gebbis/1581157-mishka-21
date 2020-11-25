@@ -9,6 +9,32 @@
   transform: translateX(-50%);
 }
 
+@mixin container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width - 100px;
+    padding-right: 0;
+  }
+}
+
+@mixin big-left-padding {
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+  }
+}
+
 // Grid's rows and columns
 
 @mixin first-row {

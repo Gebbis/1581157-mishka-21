@@ -1,3 +1,8 @@
+.categories {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
 .categories__link-wrapper {
   display: flex;
   flex-direction: column;
@@ -26,6 +31,11 @@
 
 
 @media (min-width: $tablet-width) {
+  .categories {
+    @include container;
+    box-sizing: border-box;
+  }
+
   .categories__link {
     width: 334px;
     font-size: 20px;
@@ -40,6 +50,11 @@
 
 
 @media (min-width: $desktop-width) {
+  .categories {
+    box-sizing: unset;
+    padding-right: 50px;
+  }
+
   .categories__link {
     width: 525px;
   }

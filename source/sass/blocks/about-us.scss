@@ -1,8 +1,8 @@
 .about-us {
+  @include container;
   min-height: 800px;
   display: grid;
   grid-template-rows: min-content auto;
-  padding: 0 30px;
   margin-top: 31px;
 }
 
@@ -24,7 +24,6 @@
 @media (min-width: $tablet-width) {
   .about-us {
     min-height: 630px;
-    padding: 0 50px;
   }
 
   .about-us__title {
@@ -42,6 +41,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .about-us {
+    box-sizing: unset;
+    padding-right: 50px;
+  }
+
+  .about-us__title,
+  .about-us__features-list {
+    @include big-left-padding;
+  }
+
   .about-us__title {
     font-size: 53px;
     line-height: 57px;

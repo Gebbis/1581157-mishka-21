@@ -1,7 +1,7 @@
 .reviews {
+  @include container;
   min-height: 540px;
   position: relative;
-  padding: 0 30px;
   margin-top: 58px;
   padding-bottom: 45px;
   display: grid;
@@ -65,7 +65,8 @@
   .reviews {
     min-height: 407px;
     grid-template-rows: min-content min-content;
-    padding: 0 50px;
+    background-image: url("../img/reviews-background.jpg");
+    background-repeat: no-repeat;
   }
 
   .reviews__title {
@@ -103,6 +104,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .reviews {
+    box-sizing: border-box;
+    padding-right: 0;
+  }
+
+  .reviews__title,
+  .reviews__item {
+    padding-left: 125px;
+  }
+
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
