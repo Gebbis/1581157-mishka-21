@@ -1,15 +1,10 @@
 .page-main__title {
-  @include container;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
   padding: 73px 0;
   background-color: $light-gray;
-
-  &--form-page {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -17,24 +12,13 @@
     font-size: 43px;
     line-height: 50px;
     padding: 75px 0;
-
-    &--form-page {
-      padding-left: 175px;
-      padding-right: 175px;
-    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-main__title {
-    width: $desktop-width;
     font-size: 53px;
     line-height: 57px;
     padding: 95px 0;
-
-    &--form-page {
-      padding-left: 320px;
-      padding-right: 320px;
-    }
   }
 }

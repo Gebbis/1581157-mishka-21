@@ -1,13 +1,11 @@
 .form {
-  @include container;
   margin-bottom: 55px;
-  height: 1556px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .form__annotation {
+  @include container;
   font-size: 13px;
   line-height: 24px;
   color: $light-black;
@@ -19,10 +17,27 @@
 }
 
 .form__fieldset {
+  @include container;
+  position: relative;
+  margin-top: 30px;
   font-size: 17px;
   border: none;
-  padding: 0;
-  margin: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 1px;
+    right: 30px;
+    top: 7px;
+    background-color: $line-green;
+  }
+
+  &--email {
+    &::before {
+      width: 182px;
+    }
+  }
 }
 
 .form__group-title {
@@ -35,10 +50,12 @@
 .form__text {
   display: flex;
   flex-direction: column;
+  margin-top: 22px;
 
   &--phone,
   &--email,
   &--textarea {
+    margin: 0;
     line-height: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -53,13 +70,36 @@
   line-height: 18px;
 }
 
+.form__checkbox-unit {
+  margin-top: 23px;
+}
+
 .form__text-input,
 .form__textarea {
   line-height: 18px;
-  opacity: 0.3;
+  width: 100%;
+  padding: 17px 0;
+  border: none;
+  box-shadow: inset 0 -2px 0 $black;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form__text-input {
+  &--name,
+  &--surname,
+  &--patronymic {
+    margin-left: 20px;
+  }
+}
+
+.form__textarea {
+  margin-top: 22px;
 }
 
 .form__order-wrapper {
+  @include container;
+  margin-top: 17px;
   display: flex;
   flex-direction: column;
 }
@@ -71,21 +111,14 @@
 }
 
 .form__submit {
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: $light-black;
   width: 260px;
-  height: 52px;
-  border: 2px solid $light-black;
-  background-color: transparent;
+  font-size: 17px;
+  line-height: 16px;
+  margin-top: 30px;
+  padding: 16px 0;
 }
 
 @media (min-width: $tablet-width) {
-  .form {
-    padding: 0;
-  }
-
   .form__annotation {
     padding: 0 50px;
   }
@@ -96,22 +129,34 @@
     line-height: 30px;
   }
 
+  .form__radio-list,
+  .form__checkbox-list {
+    width: 500px;
+  }
+
+  .form__wrapper {
+    &--interactive {
+      @include second-column;
+      width: 500px;
+    }
+
+    &--coloring {
+      background-color: $light-gray;
+    }
+  }
+
   .form__fieldset {
     font-size: 19px;
     display: grid;
     grid-template-columns: auto 500px;
-    grid-template-rows: repeat(3, auto);
     padding: 0 50px;
-  }
 
-  .form__fieldset:nth-child(4),
-  .form__fieldset:nth-child(6),
-  .form__fieldset:nth-child(7) {
-    background-color: $light-gray;
+    &::before {
+      width: 0;
+    }
   }
 
   .form__group-title {
-    @include all-rows;
     @include first-column;
   }
 
@@ -119,15 +164,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .form__text-input--name {
-    width: 428px;
-  }
-
-  .form__text-input--surname,
-  .form__text-input--patronymic {
-    width: 375px;
+    align-items: center;
   }
 
   .form__checkbox-list {
@@ -139,53 +176,41 @@
   .form__checkbox-label {
     display: inline-block;
     width: 200px;
-    height: 65px;
   }
 
   .form__order-wrapper {
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     padding: 0 50px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .form {
-    padding: 0;
-    width: $desktop-width;
-  }
 
-  .form__annotation {
-    padding: 0 225px;
-  }
+  @media (min-width: $desktop-width) {
+    .form__annotation,
+    .form__order-wrapper {
+      box-sizing: unset;
+      padding: 0;
+      margin: 0 auto;
+      width: 700px;
+    }
 
-  .form__fieldset {
-    grid-template-columns: 225px 700px;
-    padding-left: 97px;
-  }
+    .form__wrapper {
+      &--interactive {
+        width: 700px;
+      }
+    }
 
-  .form__fieldset:nth-child(3),
-  .form__fieldset:nth-child(4) {
-    padding-right: 97px;
-  }
+    .form__fieldset {
+      box-sizing: unset;
+      grid-template-columns: 125px 700px;
+      padding: 0;
+      padding-left: 100px;
+    }
 
-  .form__fieldset:nth-child(5),
-  .form__fieldset:nth-child(6),
-  .form__fieldset:nth-child(7),
-  .form__fieldset:nth-child(8) {
-    padding-right: 225px;
-  }
-
-  .form__text-input--name {
-    width: 626px;
-  }
-
-  .form__text-input--surname,
-  .form__text-input--patronymic {
-    width: 573px;
-  }
-
-  .form__order-wrapper {
-    padding: 0 225px;
+    .form__radio-list,
+    .form__checkbox-list {
+      width: 700px;
+    }
   }
 }
