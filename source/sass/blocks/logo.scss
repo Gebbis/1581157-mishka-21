@@ -1,1 +1,26 @@
-// надо занять место //
+.logo {
+  @include first-row;
+  @include first-column;
+
+  &--footer {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    &--footer {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    grid-column: 3 / 4;
+
+    &--footer {
+      @include first-column;
+    }
+  }
+}

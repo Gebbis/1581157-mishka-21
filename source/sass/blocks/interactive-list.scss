@@ -2,3 +2,16 @@
   text-decoration: none;
   color: $black;
 }
+
+@media (min-width: $tablet-width) {
+  .interactive-list {
+    @include first-row;
+    grid-column: 2 / -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .interactive-list {
+    grid-column: 4 / -1;
+  }
+}

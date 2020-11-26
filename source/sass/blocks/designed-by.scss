@@ -3,3 +3,10 @@
   font-size: 19px;
   line-height: 18px;
 }
+
+@media (min-width: $tablet-width) {
+  .designed-by {
+    @include last-column;
+    margin-left: auto;
+  }
+}

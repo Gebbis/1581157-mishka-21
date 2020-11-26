@@ -1,3 +1,13 @@
 .social-network {
   @include list-zeroing;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media (min-width: $tablet-width) {
+  .social-network {
+    @include second-column;
+  }
 }

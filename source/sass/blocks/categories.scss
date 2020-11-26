@@ -1,10 +1,24 @@
+.categories {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.categories__link-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .categories__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   text-decoration: none;
-  padding-left: 30px;
   color: $white;
+  flex-grow: 1;
+  padding: 18px 30px;
 
   &--interior {
     background-color: $light-green;
@@ -12,5 +26,36 @@
 
   &--toys {
     background-color: $green;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .categories {
+    @include container;
+    box-sizing: border-box;
+  }
+
+  .categories__link {
+    width: 334px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 26px 36px;
+  }
+
+  .categories__link-wrapper {
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .categories {
+    box-sizing: unset;
+    padding-right: 50px;
+  }
+
+  .categories__link {
+    width: 525px;
   }
 }

@@ -1,5 +1,8 @@
 .about-us {
-  padding: 0 30px;
+  @include container;
+  min-height: 800px;
+  display: grid;
+  grid-template-rows: min-content auto;
   margin-top: 31px;
 }
 
@@ -13,4 +16,43 @@
   @include list-zeroing;
   font-weight: 700;
   font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    min-height: 630px;
+  }
+
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-us__features-list {
+    font-size: 20px;
+    line-height: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    box-sizing: unset;
+    padding-right: 50px;
+  }
+
+  .about-us__title,
+  .about-us__features-list {
+    @include big-left-padding;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

@@ -1,5 +1,33 @@
 .page-footer {
-  padding: 0 69px;
   margin-top: 39px;
   background-color: $light-gray;
+}
+
+.page-footer__wrapper {
+  @include container;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 0 69px;
+  padding-top: 25px;
+  padding-bottom: 31px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    padding-top: 51px;
+    padding-bottom: 58px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media (min-width: $desktop-width) {
+    .page-footer__wrapper {
+      box-sizing: unset;
+      padding-top: 51px;
+      padding-bottom: 58px;
+      padding-right: 50px;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, auto);
+    }
+  }
 }

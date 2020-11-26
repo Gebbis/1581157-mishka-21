@@ -1,12 +1,14 @@
 .contacts {
+  min-height: 818px;
   margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .contacts__title,
-.contacts__info,
-.contacts__write-to-us {
-  padding-left: 29px;
-  padding-right: 30px;
+.contacts__info {
+  @include container;
 }
 
 .contacts__title {
@@ -16,12 +18,135 @@
 }
 
 .contacts__info {
+  box-sizing: unset;
   font-size: 14px;
   line-height: 30px;
+  width: 260px;
   color: $light-black;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.contacts__email-wrapper {
+  @include first-row;
+}
+
+.contacts__address-wrapper {
+  @include second-row;
+}
+
+.contacts__email-wrapper,
+.contacts__address-wrapper {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.contacts__map {
+  width: $mobile-width;
+  margin: 0 auto;
 }
 
 .contacts__write-to-us {
   text-decoration: none;
   color: $light-black;
+  width: 260px;
+  height: 52px;
+  align-self: center;
+  border: 2px solid $light-black;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    min-height: 927px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__info {
+    box-sizing: border-box;
+    grid-template-columns: min-content 225px;
+    grid-template-rows: auto;
+    column-gap: 25px;
+    font-size: 17px;
+    width: $tablet-width;
+  }
+
+  .contacts__email-wrapper {
+    @include first-column;
+  }
+
+  .contacts__address-wrapper {
+    @include second-column;
+    @include first-row;
+  }
+
+  .contacts__map {
+    width: $tablet-width;
+    height: 457px;
+  }
+
+  .contacts__write-to-us {
+    width: 230px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    @include container;
+    @include big-left-padding;
+    min-height: 630px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    margin-top: 71px;
+  }
+
+  .contacts__title,
+  .contacts__info,
+  .contacts__write-to-us {
+    width: unset;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contacts__title {
+    @include first-column;
+    @include first-row;
+    font-size: 53px;
+    line-height: 57px;
+    width: unset;
+  }
+
+  .contacts__info {
+    @include first-column;
+    min-height: 150px;
+    grid-row: 2 / 3;
+  }
+
+  .contacts__email-wrapper {
+    @include all-columns;
+    @include first-row;
+  }
+
+  .contacts__address-wrapper {
+    @include all-columns;
+    @include second-row;
+  }
+
+  .contacts__write-to-us {
+    @include first-column;
+    @include last-row;
+  }
+
+  .contacts__map {
+    @include second-column;
+    @include all-rows;
+    width: 527px;
+    height: 457px;
+  }
 }
