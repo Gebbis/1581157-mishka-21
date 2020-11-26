@@ -1,8 +1,25 @@
 .page-main__title {
+  @include container;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
   padding: 73px 22px;
-  margin: 0;
   background-color: $light-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 75px 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    width: $desktop-width;
+    font-size: 53px;
+    line-height: 57px;
+    padding: 95px 320px;
+  }
 }

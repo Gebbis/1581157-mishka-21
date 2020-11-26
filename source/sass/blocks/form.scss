@@ -1,6 +1,10 @@
 .form {
-  padding: 0 30px;
+  @include container;
   margin-bottom: 55px;
+  height: 1556px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .form__annotation {
@@ -29,6 +33,9 @@
 }
 
 .form__text {
+  display: flex;
+  flex-direction: column;
+
   &--phone,
   &--email,
   &--textarea {
@@ -52,6 +59,11 @@
   opacity: 0.3;
 }
 
+.form__order-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__note {
   font-size: 14px;
   line-height: 16px;
@@ -63,4 +75,117 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $light-black;
+  width: 260px;
+  height: 52px;
+  border: 2px solid $light-black;
+  background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    padding: 0;
+  }
+
+  .form__annotation {
+    padding: 0 50px;
+  }
+
+  .form__annotation,
+  .form__note {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form__fieldset {
+    font-size: 19px;
+    display: grid;
+    grid-template-columns: auto 500px;
+    grid-template-rows: repeat(3, auto);
+    padding: 0 50px;
+  }
+
+  .form__fieldset:nth-child(4),
+  .form__fieldset:nth-child(6),
+  .form__fieldset:nth-child(7) {
+    background-color: $light-gray;
+  }
+
+  .form__group-title {
+    @include all-rows;
+    @include first-column;
+  }
+
+  .form__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__text-input--name {
+    width: 428px;
+  }
+
+  .form__text-input--surname,
+  .form__text-input--patronymic {
+    width: 375px;
+  }
+
+  .form__checkbox-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__checkbox-label {
+    display: inline-block;
+    width: 200px;
+    height: 65px;
+  }
+
+  .form__order-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 0;
+    width: $desktop-width;
+  }
+
+  .form__annotation {
+    padding: 0 225px;
+  }
+
+  .form__fieldset {
+    grid-template-columns: 225px 700px;
+    padding-left: 97px;
+  }
+
+  .form__fieldset:nth-child(3),
+  .form__fieldset:nth-child(4) {
+    padding-right: 97px;
+  }
+
+  .form__fieldset:nth-child(5),
+  .form__fieldset:nth-child(6),
+  .form__fieldset:nth-child(7),
+  .form__fieldset:nth-child(8) {
+    padding-right: 225px;
+  }
+
+  .form__text-input--name {
+    width: 626px;
+  }
+
+  .form__text-input--surname,
+  .form__text-input--patronymic {
+    width: 573px;
+  }
+
+  .form__order-wrapper {
+    padding: 0 225px;
+  }
 }
