@@ -64,7 +64,9 @@
 
 @media (min-width: $tablet-width) {
   .item {
-    height: 334px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 
   .item__title {
@@ -73,6 +75,8 @@
   }
 
   .item__text-wrapper {
+    @include second-column;
+    @include first-row;
     border-top: 1px solid $shadow-gray;
   }
 
@@ -89,7 +93,14 @@
     height: 334px;
   }
 
+  .item__photo-link {
+    @include all-rows;
+    @include first-column;
+  }
+
   .item__order-wrapper {
+    @include second-column;
+    @include second-row;
     width: 335px;
 
     &::before {
@@ -100,8 +111,7 @@
 
 @media (min-width: $desktop-width) {
   .item {
-    width: 316px;
-    height: unset;
+    display: flex;
     flex-direction: column;
   }
 
