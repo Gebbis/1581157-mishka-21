@@ -1,3 +1,16 @@
 .catalog {
   @include list-zeroing;
+  @include container;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
 }

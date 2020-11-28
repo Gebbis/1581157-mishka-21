@@ -1,12 +1,27 @@
+.designed-by {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 43px;
+}
+
 .designed-by__text {
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
 }
 
+.designed-by__logo {
+  padding-top: 4px;
+}
+
 @media (min-width: $tablet-width) {
   .designed-by {
-    @include last-column;
-    margin-left: auto;
+    margin: 0;
+  }
+
+  .designed-by__text {
+    margin-right: 28px;
   }
 }

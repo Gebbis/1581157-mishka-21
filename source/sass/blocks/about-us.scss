@@ -1,9 +1,10 @@
 .about-us {
-  @include container;
-  min-height: 800px;
+  @include elastic-layout;
+  padding-left: 30px;
+  padding-right: 30px;
   display: grid;
   grid-template-rows: min-content auto;
-  margin-top: 31px;
+  margin-top: 9px;
 }
 
 .about-us__title {
@@ -18,30 +19,40 @@
   font-size: 17px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+}
+
+.about-us__feature-item {
+  padding-top: 63px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .about-us {
-    min-height: 630px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 25px;
   }
 
   .about-us__title {
     font-size: 43px;
     line-height: 50px;
+    margin-top: 47px;
   }
 
   .about-us__features-list {
     font-size: 20px;
     line-height: 22px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    row-gap: 27px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about-us {
+    @include desktop-layout;
     box-sizing: unset;
     padding-right: 50px;
   }
@@ -54,5 +65,12 @@
   .about-us__title {
     font-size: 53px;
     line-height: 57px;
+    margin-top: 70px;
+    margin-bottom: 34px;
+  }
+
+  .about-us__features-list {
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 116px;
   }
 }

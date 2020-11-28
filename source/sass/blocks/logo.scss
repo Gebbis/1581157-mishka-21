@@ -1,6 +1,9 @@
 .logo {
-  @include first-row;
-  @include first-column;
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  margin: 0 auto;
+  width: 86px;
 
   &--footer {
     display: none;
@@ -9,18 +12,35 @@
 
 @media (min-width: $tablet-width) {
   .logo {
+    &--header {
+      @include first-column;
+      @include first-row;
+      margin: 0;
+      padding-left: 50px;
+    }
+
+    &__image--header,
+    &--header {
+      width: 113px;
+      height: 46px;
+    }
+
     &--footer {
       display: block;
+      margin: 0;
+      width: 102px;
+      height: 34px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .logo {
-    grid-column: 3 / 4;
-
-    &--footer {
-      @include first-column;
+    &--header {
+      grid-column: 3 / 4;
+      width: 149px;
+      height: 72px;
+      margin: 0 auto;
     }
   }
 }

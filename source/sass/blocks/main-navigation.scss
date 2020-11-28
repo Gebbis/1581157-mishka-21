@@ -1,45 +1,138 @@
 .main-navigation {
-  @include all-rows;
-  @include all-columns;
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  display: grid;
-  grid-template-rows: auto 1fr;
 }
 
 .main-navigation__list {
   @include list-zeroing;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
-.main-navigation__toggle {
-  @include first-row;
-  margin-left: auto;
-  width: 20px;
-  height: 14px;
-}
-
-.main-navigation__wrapper {
+.main-navigation__offer {
   display: none;
 }
 
+@media (max-width: 767px) {
+  .main-navigation__toggle {
+    position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .main-navigation--closed {
+    .main-navigation__toggle {
+      right: 31px;
+      top: 32px;
+      width: 20px;
+      height: 14px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 2px;
+        background-color: $toggle-black;
+        box-shadow: 0 6px 0 0 $toggle-black, 0 12px 0 0 $toggle-black;
+      }
+    }
+
+    .main-navigation__wrapper {
+      display: none;
+    }
+  }
+
+  .main-navigation--opened {
+    .main-navigation__toggle {
+      width: 21px;
+      height: 20px;
+      right: 31px;
+      top: 29px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 24px;
+        height: 2px;
+        background-color: $black;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .main-navigation__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-navigation__list {
+      &--site,
+      &--interactive {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .main-navigation {
+    @include all-columns;
+    @include all-rows;
+  }
+
   .main-navigation__toggle {
     display: none;
   }
 
+  .main-navigation__list {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   .main-navigation__wrapper {
     @include header-grid-tablet;
+    @include all-rows;
+    @include all-columns;
+  }
+
+  .main-navigation__offer {
     @include second-row;
-    display: grid;
+    @include last-column;
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $light-black;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-top: 21px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-navigation__wrapper {
     @include header-grid-desktop;
+
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+
+  .main-navigation__offer {
+    grid-column: -3 / -1;
   }
 }

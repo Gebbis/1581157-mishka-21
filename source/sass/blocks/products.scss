@@ -1,17 +1,19 @@
 .products {
-  min-height: 489px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-image: url("../img/products-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 .products__title {
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 73px;
+  margin-bottom: 120px;
   width: 260px;
 }
 
@@ -26,20 +28,35 @@
       width: 100%;
       height: 24px;
       bottom: 0;
-      background-image: url("../img/zigzag-white-line.svg");
+      background-image: url("../img/tablet-zigzag-white.svg");
     }
   }
 
   .products__title {
     font-size: 43px;
     line-height: 50px;
-    width: 700px;
+    width: 511px;
+    margin-top: 111px;
+    margin-bottom: 371px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .products {
+    &::before {
+      height: 34px;
+      background-image: url("../img/desktop-zigzag-white.svg");
+    }
+  }
+
   .products__title {
     font-size: 53px;
     line-height: 57px;
+    width: 700px;
+    margin-bottom: 355px;
   }
 }
