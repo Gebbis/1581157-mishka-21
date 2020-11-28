@@ -1,6 +1,8 @@
 .button {
   font-weight: 700;
   font-size: 18px;
-  line-height: 20px;
   text-transform: uppercase;
+  color: $light-black;
+  border: 2px solid $light-black;
+  background-color: transparent;
 }
