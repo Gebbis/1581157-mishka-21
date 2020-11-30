@@ -3,11 +3,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media (min-width: $tablet-width) {
   .social-network {
-    @include second-column;
+    width: 140px;
+    justify-content: space-between;
   }
 }

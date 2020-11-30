@@ -1,6 +1,5 @@
 .categories {
-  width: $mobile-width;
-  margin: 0 auto;
+  @include elastic-layout;
 }
 
 .categories__link-wrapper {
@@ -18,29 +17,35 @@
   text-decoration: none;
   color: $white;
   flex-grow: 1;
-  padding: 18px 30px;
+  padding: 0 30px;
+  padding-top: 24px;
 
   &--interior {
     background-color: $light-green;
+    padding-bottom: 17px;
   }
 
   &--toys {
     background-color: $green;
+    padding-bottom: 19px;
   }
 }
 
 
 @media (min-width: $tablet-width) {
   .categories {
-    @include container;
     box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .categories__link {
     width: 334px;
     font-size: 20px;
     line-height: 30px;
-    padding: 26px 36px;
+    padding: 0 36px;
+    padding-top: 25px;
+    padding-bottom: 42px;
   }
 
   .categories__link-wrapper {
@@ -51,11 +56,14 @@
 
 @media (min-width: $desktop-width) {
   .categories {
-    box-sizing: unset;
+    @include desktop-layout;
+    box-sizing: border-box;
+    padding-left: 50px;
     padding-right: 50px;
   }
 
   .categories__link {
     width: 525px;
+    padding-bottom: 48px;
   }
 }
