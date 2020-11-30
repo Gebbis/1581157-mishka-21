@@ -80,17 +80,15 @@
   padding: 24px 0;
   border: 1px solid $shadow-gray;
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &--prev {
     background-image: url("../img/arrow-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &--next {
     background-image: url("../img/arrow-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
 

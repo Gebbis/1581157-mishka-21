@@ -17,10 +17,6 @@
       @include first-row;
       margin: 0;
       padding-left: 50px;
-    }
-
-    &__image--header,
-    &--header {
       width: 113px;
       height: 46px;
     }
@@ -30,6 +26,13 @@
       margin: 0;
       width: 102px;
       height: 34px;
+    }
+  }
+
+  .logo__image {
+    &--header {
+      width: 113px;
+      height: 46px;
     }
   }
 }

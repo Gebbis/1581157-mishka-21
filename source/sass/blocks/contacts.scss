@@ -40,10 +40,10 @@
 .contacts__address-wrapper {
   display: grid;
   grid-template-columns: 76px 1fr;
+}
 
-  dd {
-    margin: 0;
-  }
+.contacts__info-definition {
+  margin: 0;
 }
 
 .contacts__map {

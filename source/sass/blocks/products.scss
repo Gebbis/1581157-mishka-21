@@ -21,6 +21,7 @@
   .products {
     position: relative;
     min-height: 705px;
+    background-color: $products-gray;
 
     &::before {
       position: absolute;
