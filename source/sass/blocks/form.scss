@@ -342,7 +342,7 @@
     width: 500px;
   }
 
-  .form__wrapper {
+  .form__fieldset-wrapper {
     &--interactive {
       @include second-column;
       width: 500px;
@@ -436,7 +436,7 @@
       padding-left: 11px;
     }
 
-    .form__wrapper {
+    .form__fieldset-wrapper {
       &--interactive {
         width: 700px;
       }
