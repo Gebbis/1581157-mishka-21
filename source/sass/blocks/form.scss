@@ -102,16 +102,12 @@
     margin-top: 4px;
   }
 
-  &--phone {
-    margin-top: 23px;
-  }
-
-  &--email {
-    margin-top: 38px;
+  &--contacts {
+    margin-top: 17px;
   }
 
   &--textarea {
-    margin-top: 35px;
+    margin-top: 25px;
   }
 }
 
@@ -161,6 +157,10 @@
       margin-left: 20px;
       background-color: $line-green;
     }
+  }
+
+  &--email {
+    margin-top: 37px;
   }
 }
 
@@ -268,12 +268,8 @@
       padding-bottom: 53px;
     }
 
-    &--phone {
+    &--contacts {
       padding-top: 50px;
-    }
-
-    &--email {
-      padding-top: 24px;
       padding-bottom: 50px;
     }
 
@@ -364,11 +360,18 @@
     &--textarea {
       font-size: 17px;
       align-items: unset;
-      margin-top: 17px;
 
       &::after {
         flex-grow: 0;
       }
+    }
+
+    &--phone {
+      margin-top: 17px;
+    }
+
+    &--email {
+      margin-top: 41px;
     }
 
     &--textarea {
@@ -393,6 +396,10 @@
     &--patronymic {
       margin-left: 24px;
     }
+
+    &--email {
+      margin-top: 24px;
+    }
   }
 
   .form__order-wrapper {
@@ -416,10 +423,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    .form {
-      padding-bottom: 10px;
-    }
-
     .form__annotation,
     .form__order-wrapper {
       box-sizing: unset;
@@ -459,12 +462,8 @@
         padding-bottom: 54px;
       }
 
-      &--phone {
+      &--contacts {
         padding-top: 48px;
-      }
-
-      &--email {
-        padding-top: 25px;
         padding-bottom: 50px;
       }
 

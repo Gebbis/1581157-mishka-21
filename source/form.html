@@ -255,7 +255,8 @@
         </div>
       </fieldset>
       <div class="form__fieldset-wrapper form__fieldset-wrapper--coloring">
-        <div class="form__fieldset  form__fieldset--phone">
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <legend class="visually-hidden">Ваши контакты</legend>
           <label class="form__text form__text--phone" for="phone">
             тел
           </label>
@@ -263,18 +264,14 @@
             <input class="form__text-input" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
               pattern="+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
           </div>
-        </div>
-      </div>
-      <div class="form__fieldset-wrapper form__fieldset-wrapper--coloring">
-        <div class="form__fieldset form__fieldset--email">
           <label class="form__text form__text--email" for="email-box">
             e-mail
           </label>
           <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive">
-            <input class="form__text-input" id="email-box" name="email-box" type="email" placeholder="Ваш Email*"
-              required>
+            <input class="form__text-input form__text-input--email" id="email-box" name="email-box" type="email"
+              placeholder="Ваш Email*" required>
           </div>
-        </div>
+        </fieldset>
       </div>
       <div class="form__fieldset  form__fieldset--textarea">
         <label class="form__text form__text--textarea" for="mail-text">
