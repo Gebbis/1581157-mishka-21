@@ -23,14 +23,15 @@
   &--interior {
     background-color: $light-green;
     padding-bottom: 17px;
+    padding-right: 36px;
   }
 
   &--toys {
     background-color: $green;
     padding-bottom: 19px;
+    padding-right: 27px;
   }
 }
-
 
 @media (min-width: $tablet-width) {
   .categories {
@@ -46,6 +47,15 @@
     padding: 0 36px;
     padding-top: 25px;
     padding-bottom: 42px;
+
+    &--interior {
+      padding-top: 28px;
+    }
+
+    &--toys {
+      padding-right: 33px;
+      padding-top: 27px;
+    }
   }
 
   .categories__link-wrapper {

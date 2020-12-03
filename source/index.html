@@ -12,8 +12,12 @@
 
   <header class="page-header page-header--index">
     <a class="logo logo--header" href="#">
-      <img class="logo__image logo__image--header" src="img/logo-mobile.svg" width="86" height="35"
-        alt="Логотип магазина Мишка">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+        <img class="logo__image logo__image--header" src="img/header-logo-mobile.svg" width="86" height="35"
+          alt="Логотип магазина Мишка">
+      </picture>
     </a>
     <nav class="main-navigation">
       <button class="main-navigation__toggle" type="button">
@@ -73,13 +77,13 @@
         <div class="categories__link-wrapper">
           <a class="categories__link categories__link--interior" href="#">
             Предметы <br> интерьера
-            <img class="categories__logo categories__logo--interior" src="https://via.placeholder.com/40x62" width="40"
-              height="62" alt="Иконка предметов интерьера">
+            <img class="categories__logo categories__logo--interior" src="img/interior.svg" width="40" height="62"
+              alt="Иконка предметов интерьера">
           </a>
           <a class="categories__link categories__link--toys" href="#">
             Детские <br> игрушки
-            <img class="categories__logo categories__logo--toys" src="https://via.placeholder.com/60x60" width="60"
-              height="60" alt="Иконка детских игрушек">
+            <img class="categories__logo categories__logo--toys" src="img/toy.svg" width="60" height="60"
+              alt="Иконка детских игрушек">
           </a>
         </div>
       </section>
@@ -109,8 +113,13 @@
           </div>
         </dl>
       </div>
-      <img class="product__photo" src="https://via.placeholder.com/260x315" width="260" height="315"
-        alt="Фото товара - Вязаные корзинки">
+      <picture class="product__photo-wrapper">
+        <source media="(min-width: 1150px)"
+          srcset="img/product-item-desktop.jpg 1x, img/product-item-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/product-item-tablet.jpg 1x, img/product-item-tablet@2x.jpg 2x">
+        <img class="product__photo" src="img/product-item-mobile.jpg" srcset="img/product-item-mobile@2x.jpg 2x"
+          width="260" height="315" alt="Фото товара - Вязаные корзинки">
+      </picture>
       <div class="product__order-wrapper">
         <span class="product__price">Цена: 990 руб.</span>
         <button class="product__button button" type="button">заказать</button>
@@ -119,22 +128,22 @@
     <section class="about-us">
       <h2 class="about-us__title">Коротко о нас:</h2>
       <ul class="about-us__features-list">
-        <li class="about-us__feature-item">
+        <li class="about-us__feature-item about-us__feature-item--ecologically">
           Экологически <br> чистые материалы
         </li>
-        <li class="about-us__feature-item">
+        <li class="about-us__feature-item about-us__feature-item--price">
           Скандинавский стиль <br>по российской цене
         </li>
-        <li class="about-us__feature-item">
+        <li class="about-us__feature-item about-us__feature-item--likes">
           Увеличивает лайки <br> на фотографиях
         </li>
-        <li class="about-us__feature-item">
+        <li class="about-us__feature-item about-us__feature-item--roll">
           Связано вручную <br> с любовью и умилением
         </li>
-        <li class="about-us__feature-item">
+        <li class="about-us__feature-item about-us__feature-item--domestic">
           Поддержка отечественного <br> производителя
         </li>
-        <li class="about-us__feature-item">
+        <li class="about-us__feature-item about-us__feature-item--gift">
           Поставляется <br> в подарочной упаковке
         </li>
       </ul>
@@ -175,7 +184,12 @@
           <dd class="contacts__info-definition">г. Санкт-Петербург <br> ул. Большая Конюшенная д. 19/8, офис 101</dd>
         </div>
       </dl>
-      <img class="contacts__map" src="https://via.placeholder.com/320x455" width="320" height="455" alt="Схема проезда">
+      <picture class="contacts__map-wrapper">
+        <source media="(min-width: 1150px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+        <img class="contacts__map" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="455"
+          alt="Схема проезда">
+      </picture>
       <a class="contacts__write-to-us button" href="#">
         Напишите нам
       </a>
@@ -185,7 +199,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="logo logo--footer" href="#">
-        <img src="https://via.placeholder.com/102x34" width="102" height="34" alt="Логотип сайта Мишка">
+        <img src="img/footer-logo.svg" width="102" height="34" alt="Логотип сайта Мишка">
       </a>
       <ul class="social-network">
         <li class="social-network__item">
