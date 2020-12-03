@@ -1,5 +1,7 @@
 .production {
-  @include container;
+  @include elastic-layout;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,29 +17,32 @@
   margin: 0;
   padding-top: 21px;
   padding-bottom: 26px;
-  border: 1px solid $shadow-gray;
+  outline: 1px solid $shadow-gray;
 }
 
 .production__order-wrapper {
   padding-left: 34px;
   padding-bottom: 33px;
-  border: 1px solid $shadow-gray;
+  outline: 1px solid $shadow-gray;
 }
 
 .production__description {
   font-size: 13px;
   line-height: 24px;
+  margin-top: 35px;
   color: $light-black;
 }
 
 .production__submit {
+  font-size: 18px;
   width: 192px;
   line-height: 16px;
   padding: 16px 0;
+  margin-top: 28px;
 }
 
 .production__video {
-  width: 260px;
+  @include elastic-layout;
   height: 150px;
   background-image: url("../img/video-background.jpg");
 }
@@ -45,9 +50,12 @@
 
 @media (min-width: $tablet-width) {
   .production {
-    width: 668px;
     padding: 0;
-    border: 1px solid $shadow-gray;
+    outline: 1px solid $shadow-gray;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 53px;
+    margin-bottom: 62px;
   }
 
   .production__video {
@@ -63,22 +71,28 @@
 
   .production__title {
     font-size: 20px;
+    padding-top: 42px;
     padding-left: 107px;
+    padding-bottom: 23px;
     border: none;
   }
 
   .production__description {
     font-size: 15px;
     line-height: 30px;
+    margin: 0;
   }
 
   .production__order-wrapper {
-    padding-left: 40px;
+    padding: 0 42px;
+    padding-bottom: 45px;
     border: none;
   }
 
   .production__submit {
+    font-size: 17px;
     width: 584px;
+    margin-top: 42px;
   }
 }
 
@@ -88,11 +102,16 @@
     display: grid;
     grid-template-columns: auto 367px;
     grid-template-rows: max-content auto;
+    margin: 0 auto;
+    margin-top: 58px;
+    margin-bottom: 105px;
   }
 
   .production__video {
     @include first-column;
     @include all-rows;
+    width: 683px;
+    height: 455px;
   }
 
   .production__description {
@@ -101,6 +120,8 @@
 
   .production__title {
     @include first-row;
+    width: 178px;
+    padding-top: 96px;
   }
 
   .production__order-wrapper {
@@ -111,9 +132,11 @@
   .production__order-wrapper {
     @include second-column;
     padding-left: 79px;
+    outline: none;
   }
 
   .production__submit {
     width: 230px;
+    margin-top: 55px;
   }
 }
