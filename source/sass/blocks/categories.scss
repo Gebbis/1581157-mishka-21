@@ -8,6 +8,7 @@
 }
 
 .categories__link {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -19,17 +20,36 @@
   flex-grow: 1;
   padding: 0 30px;
   padding-top: 24px;
+  padding-bottom: 31px;
+  padding-right: 27px;
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
 
   &--interior {
     background-color: $light-green;
-    padding-bottom: 17px;
-    padding-right: 36px;
+
+    &::after {
+      width: 40px;
+      height: 62px;
+      top: 22px;
+      right: 36px;
+      background-image: url("../img/interior.svg");
+    }
   }
 
   &--toys {
     background-color: $green;
-    padding-bottom: 19px;
-    padding-right: 27px;
+
+    &::after {
+      width: 60px;
+      height: 60px;
+      top: 21px;
+      right: 27px;
+      background-image: url("../img/toy.svg");
+    }
   }
 }
 
@@ -50,11 +70,21 @@
 
     &--interior {
       padding-top: 28px;
+
+      &::after {
+        top: 29px;
+        right: 38px;
+      }
     }
 
     &--toys {
       padding-right: 33px;
       padding-top: 27px;
+
+      &::after {
+        top: 32px;
+        right: 34px;
+      }
     }
   }
 
