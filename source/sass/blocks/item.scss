@@ -130,7 +130,7 @@
   .item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: unset;
   }
 
   .item__text-wrapper {
@@ -159,6 +159,7 @@
     padding: 0 27px;
     padding-top: 23px;
     padding-bottom: 25px;
+    margin-top: auto;
     width: 316px;
 
     &::before {
