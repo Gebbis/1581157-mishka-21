@@ -130,7 +130,7 @@
   .item {
     display: flex;
     flex-direction: column;
-    justify-content: unset;
+    justify-content: space-between;
   }
 
   .item__text-wrapper {
