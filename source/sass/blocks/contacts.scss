@@ -61,7 +61,7 @@
   align-self: center;
   text-align: center;
   padding: 14px 0;
-  margin-top: 41px;
+  margin-top: 34px;
 }
 
 @media (min-width: $tablet-width) {
@@ -71,9 +71,20 @@
   }
 
   .contacts__title {
+    position: relative;
     font-size: 43px;
     line-height: 50px;
     margin-top: 43px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 47px;
+      height: 81px;
+      right: 53px;
+      bottom: -8px;
+      background-image: url("../img/contacts-flag.svg");
+    }
   }
 
   .contacts__info {
@@ -115,7 +126,7 @@
   .contacts__write-to-us {
     font-size: 17px;
     width: 230px;
-    margin-top: 55px;
+    margin-top: 50px;
   }
 }
 
@@ -147,6 +158,11 @@
     line-height: 57px;
     width: unset;
     margin-top: 123px;
+
+    &::before {
+      left: -111px;
+      bottom: 29px;
+    }
   }
 
   .contacts__info {

@@ -22,8 +22,77 @@
 }
 
 .about-us__feature-item {
+  position: relative;
   padding-top: 63px;
   padding-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 5px;
+    background-repeat: no-repeat;
+  }
+
+  &--ecologically {
+    &::before {
+      width: 33px;
+      height: 38px;
+      top: 6px;
+      left: 8px;
+      background-image: url("../img/icon-ecologically.svg");
+    }
+  }
+
+  &--price {
+    &::before {
+      width: 47px;
+      height: 27px;
+      top: 8px;
+      left: -1px;
+      background-image: url("../img/icon-price.svg");
+    }
+  }
+
+  &--likes {
+    &::before {
+      width: 34px;
+      height: 27px;
+      top: 12px;
+      left: 7px;
+      background-image: url("../img/icon-likes.svg");
+    }
+  }
+
+  &--roll {
+    &::before {
+      width: 35px;
+      height: 34px;
+      top: 9px;
+      left: 4px;
+      background-image: url("../img/icon-roll.svg");
+    }
+  }
+
+  &--domestic {
+    &::before {
+      width: 55px;
+      height: 23px;
+      top: 10px;
+      left: -6px;
+      background-image: url("../img/icon-domestic.svg");
+    }
+  }
+
+  &--gift {
+    &::before {
+      width: 33px;
+      height: 32px;
+      top: 8px;
+      left: 3px;
+      background-image: url("../img/icon-gift.svg");
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -65,7 +134,7 @@
   .about-us__title {
     font-size: 53px;
     line-height: 57px;
-    margin-top: 70px;
+    margin-top: 64px;
     margin-bottom: 34px;
   }
 
