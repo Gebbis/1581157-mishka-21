@@ -4,18 +4,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
-  border: 1px solid $shadow-gray;
+  outline: 1px solid $shadow-gray;
   border-top: none;
 }
 
 .item__text-wrapper {
   padding-left: 28px;
+  padding-bottom: 5px;
 }
 
 .item__title {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  margin: 0;
+  margin-top: 30px;
 }
 
 .item__title-link {
@@ -23,19 +26,27 @@
   color: $black;
 }
 
+.item__photo,
+.item__photo-link {
+  margin: 0 auto;
+  width: 260px;
+  height: 195px;
+}
+
 .item__description {
   font-size: 13px;
   line-height: 30px;
+  margin-top: 5px;
   color: $light-black;
 }
 
 .item__order-wrapper {
+  width: 100%;
   position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 260px;
   padding: 0 27px;
   padding-bottom: 26px;
   padding-top: 22px;
@@ -66,17 +77,20 @@
   .item {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 73px;
+    margin-top: 54px;
   }
 
   .item__title {
     width: 230px;
     font-size: 20px;
+    margin-top: 27px;
   }
 
   .item__text-wrapper {
     @include second-column;
     @include first-row;
+    padding-left: 33px;
     border-top: 1px solid $shadow-gray;
   }
 
@@ -88,7 +102,8 @@
     font-size: 17px;
   }
 
-  .item__photo {
+  .item__photo,
+  .item__photo-link {
     width: 334px;
     height: 334px;
   }
@@ -102,6 +117,8 @@
     @include second-column;
     @include second-row;
     width: 335px;
+    padding-left: 33px;
+    align-items: flex-end;
 
     &::before {
       width: 268px;
@@ -113,20 +130,36 @@
   .item {
     display: flex;
     flex-direction: column;
+    justify-content: unset;
   }
 
   .item__text-wrapper {
     box-sizing: border-box;
     width: 316px;
+    padding-left: 28px;
+    padding-bottom: 24px;
     border: none;
+
+    &--large-basket {
+      padding-bottom: 0;
+    }
   }
 
-  .item__photo {
+  .item__title {
+    margin-top: 27px;
+  }
+
+  .item__photo,
+  .item__photo-link {
     width: 316px;
     height: 462px;
   }
 
   .item__order-wrapper {
+    padding: 0 27px;
+    padding-top: 23px;
+    padding-bottom: 25px;
+    margin-top: auto;
     width: 316px;
 
     &::before {

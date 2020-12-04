@@ -1,16 +1,28 @@
 .catalog {
   @include list-zeroing;
-  @include container;
+  @include elastic-layout;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
+@media (min-width: $tablet-width) {
+  .catalog {
+    padding-top: 13px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 
 @media (min-width: $desktop-width) {
   .catalog {
+    @include desktop-layout;
+    box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 50px;
+    padding-top: 56px;
   }
 }
