@@ -12,8 +12,12 @@
 
   <header class="page-header page-header--others">
     <a class="logo logo--header" href="index.html">
-      <img class="logo__image logo__image--header" src="img/logo-mobile.svg" width="86" height="35"
-        alt="Логотип магазина Мишка">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/header-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+        <img class="logo__image logo__image--header" src="img/header-logo-mobile.svg" width="86" height="35"
+          alt="Логотип магазина Мишка">
+      </picture>
     </a>
     <nav class="main-navigation">
       <button class="main-navigation__toggle" type="button">
@@ -260,14 +264,14 @@
           <label class="form__text form__text--phone" for="phone">
             тел
           </label>
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive">
-            <input class="form__text-input" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-              pattern="+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive  form__fieldset-wrapper--phone">
+            <input class="form__text-input form__text-input--phone" type="tel" id="phone" name="phone"
+              placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
           </div>
           <label class="form__text form__text--email" for="email-box">
             e-mail
           </label>
-          <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive">
+          <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive form__fieldset-wrapper--email">
             <input class="form__text-input form__text-input--email" id="email-box" name="email-box" type="email"
               placeholder="Ваш Email*" required>
           </div>
@@ -293,7 +297,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="logo logo--footer" href="index.html">
-        <img src="https://via.placeholder.com/102x34" width="102" height="34" alt="Логотип сайта Мишка">
+        <img src="img/footer-logo.svg" width="102" height="34" alt="Логотип сайта Мишка">
       </a>
       <ul class="social-network">
         <li class="social-network__item">
