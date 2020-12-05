@@ -69,8 +69,11 @@
 }
 
 .item__cart {
-  width: 21px;
-  height: 18px;
+  padding: 0;
+  width: 20px;
+  height: 19px;
+  border: none;
+  background-color: transparent;
 }
 
 @media (min-width: $tablet-width) {
@@ -118,11 +121,17 @@
     @include second-row;
     width: 335px;
     padding-left: 33px;
-    align-items: flex-end;
+    padding-right: 32px;
 
     &::before {
       width: 268px;
     }
+  }
+
+  .item__cart,
+  .item__cart-icon {
+    width: 21px;
+    height: 18px;
   }
 }
 
@@ -156,7 +165,7 @@
   }
 
   .item__order-wrapper {
-    padding: 0 27px;
+    padding-left: 27px;
     padding-top: 23px;
     padding-bottom: 25px;
     margin-top: auto;
