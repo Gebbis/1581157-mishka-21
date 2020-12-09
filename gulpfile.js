@@ -11,6 +11,8 @@ const csso = require("postcss-csso");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Styles
 
@@ -23,28 +25,13 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
 
-// StylesBuild
-
-const stylesBuild = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
-
-exports.stylesBuild = stylesBuild;
+// Styles Minify Build
 
 const stylesMinBuild = () => {
   return gulp.src("source/sass/style.scss")
@@ -113,7 +100,6 @@ const copy = () => {
       "source/fonts/*.{woff2,woff}",
       "source/*.ico",
       "source/img/**/*.{jpg,png,svg}",
-      "source/*.html",
       "source/js/*.js"
     ], {
       base: "source"
@@ -131,16 +117,40 @@ const clean = () => {
 
 exports.clean = clean;
 
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"));
+}
+
+// Scripts Minify
+
+const scriptsMin = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scriptsMin = scriptsMin;
+
 // Build
 
 const build = gulp.series(
   clean,
   gulp.parallel(
-    stylesBuild,
+    styles,
     stylesMinBuild,
+    scriptsMin,
     sprite,
     createWebP,
-    copy
+    copy,
+    html
   )
 )
 
@@ -151,12 +161,19 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
     ui: false,
   });
+  done();
+}
+
+// Reload
+
+const reload = done => {
+  sync.reload();
   done();
 }
 
@@ -166,7 +183,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 exports.default = gulp.series(
