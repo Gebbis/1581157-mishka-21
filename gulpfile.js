@@ -37,6 +37,21 @@ const stylesBuild = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.stylesBuild = stylesBuild;
+
+const stylesMinBuild = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
@@ -46,7 +61,7 @@ const stylesBuild = () => {
     .pipe(sync.stream());
 }
 
-exports.stylesBuild = stylesBuild;
+exports.stylesMinBuild = stylesMinBuild;
 
 // Sprite
 
@@ -122,6 +137,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     stylesBuild,
+    stylesMinBuild,
     sprite,
     createWebP,
     copy
