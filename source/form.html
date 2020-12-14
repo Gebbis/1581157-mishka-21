@@ -231,6 +231,10 @@
           <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive  form__fieldset-wrapper--phone">
             <input class="form__text-input form__text-input--phone" type="tel" id="phone" name="phone"
               placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
+            <svg class="form__input-icon form__input-icon--phone" width="25" height="24" viewBox="0 0 25 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#icon-phone"></use>
+            </svg>
           </div>
           <label class="form__text form__text--email" for="email-box">
             e-mail
@@ -238,6 +242,10 @@
           <div class="form__fieldset-wrapper form__fieldset-wrapper--interactive form__fieldset-wrapper--email">
             <input class="form__text-input form__text-input--email" id="email-box" name="email-box" type="email"
               placeholder="Ваш Email*" required>
+            <svg class="form__input-icon form__input-icon--email" width="32" height="21" viewBox="0 0 32 21" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/sprite.svg#icon-email"></use>
+            </svg>
           </div>
         </fieldset>
       </div>
@@ -261,13 +269,17 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="logo logo--footer" href="index.html">
-        <img src="img/footer-logo.svg" width="102" height="34" alt="Логотип сайта Мишка">
+        <svg class="logo--footer-image" width="102" height="34" viewBox="0 0 102 34" fill="none"
+          xmlns="http://www.w3.org/2000/svg" aria-label="Логотип сайта Мишка">
+          <use xlink:href="img/icons/sprite.svg#footer-logo"></use>
+        </svg>
       </a>
       <ul class="social-network">
         <li class="social-network__item">
           <a class="social-network__link social-network__link--instagram" href="https://www.instagram.com"
             aria-label="instagram">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-network__icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#instagram"></use>
             </svg>
           </a>
@@ -275,7 +287,8 @@
         <li class="social-network__item">
           <a class="social-network__link social-network__link--facebook" href="https://www.facebook.com/"
             aria-label="facebook">
-            <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-network__icon" width="15" height="28" viewBox="0 0 15 28" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#facebook"></use>
             </svg>
           </a>
@@ -283,7 +296,8 @@
         <li class="social-network__item">
           <a class="social-network__link social-network__link--twitter" href="https://twitter.com/"
             aria-label="twitter">
-            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-network__icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#twitter"></use>
             </svg>
           </a>
@@ -292,8 +306,8 @@
       <div class="designed-by">
         <span class="designed-by__text">Разработано</span>
         <a class="designed-by__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Логотип веб-студии">
+          <svg class="designed-by__icon" width="27" height="35" viewBox="0 0 27 35" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-label="Логотип веб-студии">
             <use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
           </svg>
         </a>

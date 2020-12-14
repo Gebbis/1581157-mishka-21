@@ -24,31 +24,18 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream())
+    .pipe(postcss([
+      csso()
+    ]))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
-
-// Styles Minify Build
-
-const stylesMinBuild = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
-
-exports.stylesMinBuild = stylesMinBuild;
 
 // Sprite
 
@@ -122,7 +109,7 @@ exports.clean = clean;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({
-      collapseWhitespace: true
+      collapseWhitespace: false
     }))
     .pipe(gulp.dest("build"));
 }
@@ -145,7 +132,6 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     styles,
-    stylesMinBuild,
     scriptsMin,
     sprite,
     createWebP,

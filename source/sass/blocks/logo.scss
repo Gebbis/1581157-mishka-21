@@ -5,8 +5,30 @@
   margin: 0 auto;
   width: 86px;
 
+  &--header {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
+  }
+
   &--footer {
     display: none;
+
+    &-image {
+      fill: black;
+
+      &:hover {
+        fill: $footer-green;
+      }
+
+      &:focus {
+        opacity: 0.3;
+      }
+    }
   }
 }
 

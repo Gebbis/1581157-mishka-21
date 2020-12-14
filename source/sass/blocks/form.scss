@@ -50,6 +50,19 @@
   .form__radio-frame {
     position: absolute;
     left: 0;
+    stroke: $light-black;
+  }
+
+  &:hover {
+    .form__radio-frame {
+      stroke: $line-green;
+    }
+  }
+
+  &:focus {
+    .form__radio-frame {
+      stroke: rgba(0, 0, 0, 0.3);
+    }
   }
 
   &--interior {
@@ -79,12 +92,25 @@
 .form__checkbox-label {
   position: relative;
   padding-left: 61px;
+
+  &:hover {
+    .form__checkbox-frame {
+      stroke: $line-green;
+    }
+  }
+
+  &:focus {
+    .form__checkbox-frame {
+      stroke: rgba(68, 68, 68, 0.3);
+    }
+  }
 }
 
 .form__checkbox-frame {
   position: absolute;
   left: 0;
   top: -8px;
+  stroke: $light-black;
 }
 
 .form__fieldset {
@@ -116,30 +142,25 @@
   &--phone {
     position: relative;
 
-    &::after {
+    .form__input-icon {
       position: absolute;
-      content: "";
-      background-repeat: no-repeat;
-    }
-  }
+      fill: $black;
+      opacity: 0.2;
 
-  &--phone {
-    &::after {
-      width: 25px;
-      height: 24px;
-      right: 7px;
-      top: 14px;
-      background-image: url("../img/icon-phone.svg");
-    }
-  }
+      &:hover {
+        fill: $line-green;
+        opacity: 1;
+      }
 
-  &--email {
-    &::after {
-      width: 32px;
-      height: 21px;
-      right: 2px;
-      top: 18px;
-      background-image: url("../img/icon-email.svg");
+      &--phone {
+        right: 7px;
+        top: 14px;
+      }
+
+      &--email {
+        right: 2px;
+        top: 18px;
+      }
     }
   }
 }
@@ -206,8 +227,17 @@
 
 .form__text-input {
   border: none;
+  outline: none;
   padding: 17px 0;
   box-shadow: inset 0 -2px 0 $black;
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 $line-green;
+  }
+
+  &:focus {
+    color: $light-black;
+  }
 
   &--phone,
   &--email {
@@ -219,10 +249,19 @@
 
 .form__textarea {
   box-sizing: border-box;
-  border: 2px solid #444444;
   margin-top: 22px;
   padding: 17px;
   height: 142px;
+  border: none;
+  outline: 2px solid $light-black;
+
+  &:hover {
+    outline: 2px solid $line-green;
+  }
+
+  &:focus {
+    color: $black;
+  }
 }
 
 .form__text-input,
@@ -388,15 +427,13 @@
       background-color: $light-gray;
     }
 
-    &--phone {
-      &::after {
+    .form__input-icon {
+      &--phone {
         right: 28px;
         top: 10px;
       }
-    }
 
-    &--email {
-      &::after {
+      &--email {
         right: 25px;
         top: 39px;
       }
@@ -503,16 +540,13 @@
         width: 700px;
       }
 
-
-      &--phone {
-        &::after {
+      .form__input-icon {
+        &--phone {
           right: 8px;
           top: 12px;
         }
-      }
 
-      &--email {
-        &::after {
+        &--email {
           right: 3px;
           top: 41px;
         }

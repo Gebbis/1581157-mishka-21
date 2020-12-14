@@ -6,6 +6,14 @@
   margin-top: 30px;
   outline: 1px solid $shadow-gray;
   border-top: none;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .item__text-wrapper {
@@ -24,6 +32,14 @@
 .item__title-link {
   text-decoration: none;
   color: $black;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .item__photo,
@@ -73,7 +89,30 @@
   width: 20px;
   height: 19px;
   border: none;
+  outline: none;
   background-color: transparent;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+
+    .item__cart-icon {
+      fill: $light-green;
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+
+    .item__cart-icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.item__cart-icon {
+  fill: $black;
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {

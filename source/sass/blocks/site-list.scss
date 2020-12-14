@@ -12,6 +12,14 @@
   flex-grow: 1;
   text-decoration: none;
   color: $black;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

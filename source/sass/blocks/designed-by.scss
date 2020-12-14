@@ -16,6 +16,18 @@
   padding-top: 4px;
 }
 
+.designed-by__icon {
+  fill: $light-green;
+
+  &:hover {
+    fill: $footer-green;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .designed-by {
     margin: 0;

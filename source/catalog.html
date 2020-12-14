@@ -171,7 +171,8 @@
       <h2 class="production__title">Процесс производства</h2>
       <div class="production__video">
         <button class="production__play" type="button" aria-label="Включить видео-плеер">
-          <svg width="101" height="77" viewBox="0 0 101 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="production__play-icon" width="101" height="77" viewBox="0 0 101 77" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icons/sprite.svg#player-play"></use>
           </svg>
         </button>
@@ -183,18 +184,48 @@
         <button class="production__submit button" type="button">Сделать заказ</button>
       </div>
     </section>
+    <div class="modal-popup">
+      <form class="modal-popup__form" action="https://echo.htmlacademy.ru/" method="GET">
+        <h2 class="modal-popup__header">Добавить в корзину</h2>
+        <fieldset class="modal-popup__fieldset">
+          <legend class="modal-popup__title">Выберите размер:</legend>
+          <ul class="modal-popup__list">
+            <li class="modal-popup__item">
+              <input class="visually-hidden modal-popup__radio-input" type="radio" name="size" id="size-s"
+                value="size-s" checked>
+              <label class="modal-popup__radio" for="size-s">S</label>
+            </li>
+            <li class="modal-popup__item">
+              <input class="visually-hidden modal-popup__radio-input" type="radio" name="size" id="size-m"
+                value="size-m">
+              <label class="modal-popup__radio" for="size-m">M</label>
+            </li>
+            <li class="modal-popup__item">
+              <input class="visually-hidden modal-popup__radio-input" type="radio" name="size" id="size-l"
+                value="size-l">
+              <label class="modal-popup__radio" for="size-l">L</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="modal-popup__submit button" type="submit">Добавить</button>
+      </form>
+    </div>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="logo logo--footer" href="index.html">
-        <img src="img/footer-logo.svg" width="102" height="34" alt="Логотип сайта Мишка">
+        <svg class="logo--footer-image" width="102" height="34" viewBox="0 0 102 34" fill="none"
+          xmlns="http://www.w3.org/2000/svg" aria-label="Логотип сайта Мишка">
+          <use xlink:href="img/icons/sprite.svg#footer-logo"></use>
+        </svg>
       </a>
       <ul class="social-network">
         <li class="social-network__item">
           <a class="social-network__link social-network__link--instagram" href="https://www.instagram.com"
             aria-label="instagram">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-network__icon" width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#instagram"></use>
             </svg>
           </a>
@@ -202,7 +233,8 @@
         <li class="social-network__item">
           <a class="social-network__link social-network__link--facebook" href="https://www.facebook.com/"
             aria-label="facebook">
-            <svg width="15" height="28" viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-network__icon" width="15" height="28" viewBox="0 0 15 28" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#facebook"></use>
             </svg>
           </a>
@@ -210,7 +242,8 @@
         <li class="social-network__item">
           <a class="social-network__link social-network__link--twitter" href="https://twitter.com/"
             aria-label="twitter">
-            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-network__icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/icons/sprite.svg#twitter"></use>
             </svg>
           </a>
@@ -219,8 +252,8 @@
       <div class="designed-by">
         <span class="designed-by__text">Разработано</span>
         <a class="designed-by__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Логотип веб-студии">
+          <svg class="designed-by__icon" width="27" height="35" viewBox="0 0 27 35" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-label="Логотип веб-студии">
             <use xlink:href="img/icons/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
@@ -229,7 +262,7 @@
   </footer>
 
   <script src="js/script.js"></script>
-
+  <script src="js/catalog-modal-open.js"></script>
 </body>
 
 </html>

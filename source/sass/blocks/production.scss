@@ -7,6 +7,14 @@
   justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 58px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .production__title {
@@ -63,6 +71,7 @@
   background-position: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
@@ -72,7 +81,21 @@
 
 .production__play {
   border: none;
+  outline: none;
+  width: 102px;
+  height: 77px;
   background-color: transparent;
+
+  &:hover .production__play-icon {
+    width: 120%;
+    height: auto;
+  }
+
+  &:focus .production__play-icon {
+    width: 80%;
+    height: auto;
+    opacity: 0.3;
+  }
 }
 
 

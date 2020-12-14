@@ -12,10 +12,29 @@
   padding-bottom: 27px;
   padding-left: 76px;
   color: $black;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+
+    .interactive-list__link-icon {
+      fill: $light-green;
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+
+    .interactive-list__link-icon {
+      opacity: 0.3;
+    }
+  }
 }
 
 .interactive-list__link-icon {
   position: absolute;
+  fill: $black;
+  opacity: 0.2;
 
   &--site-search {
     left: 32px;
