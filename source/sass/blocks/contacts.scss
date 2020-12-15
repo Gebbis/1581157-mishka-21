@@ -67,7 +67,7 @@
     }
   }
 
-  &:focus {
+  &:active {
     &::after {
       opacity: 0.1;
     }
