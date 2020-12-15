@@ -87,15 +87,6 @@
   width: 260px;
   padding: 14px 0;
   margin-top: 24px;
-
-  &:hover {
-    background-color: $light-black;
-    color: $white;
-  }
-
-  &:focus {
-    color: rgba(255, 255, 255, 0.3);
-  }
 }
 
 @media (min-width: $tablet-width) {

@@ -4,4 +4,13 @@
   color: $light-black;
   border: 2px solid $light-black;
   background-color: transparent;
+
+  &:hover {
+    background-color: $light-black;
+    color: $white;
+  }
+
+  &:focus {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
