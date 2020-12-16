@@ -1,5 +1,6 @@
 .production {
   @include elastic-layout;
+  position: relative;
   padding-left: 30px;
   padding-right: 30px;
   display: flex;
@@ -9,6 +10,16 @@
   margin-bottom: 58px;
 }
 
+.production__info-wrapper {
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .production__title {
   position: relative;
   font-weight: 700;
@@ -16,8 +27,8 @@
   line-height: 24px;
   padding-left: 91px;
   margin: 0;
-  padding-top: 21px;
-  padding-bottom: 26px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   outline: 1px solid $shadow-gray;
 
   &::before {
@@ -31,12 +42,18 @@
   }
 }
 
+.production__title-text {
+  display: block;
+  width: 130px;
+}
+
 .production__order-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 33px;
   padding-bottom: 33px;
+  margin-top: 150px;
   outline: 1px solid $shadow-gray;
 }
 
@@ -57,12 +74,16 @@
 
 .production__video {
   @include elastic-layout;
+  position: absolute;
+  top: 97px;
+  left: 0;
   height: 150px;
   background-image: url("../img/video-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
@@ -72,7 +93,19 @@
 
 .production__play {
   border: none;
+  outline: none;
+  width: 102px;
+  height: 77px;
   background-color: transparent;
+
+  &:hover .production__play-icon {
+    transform: scale(1.2);
+  }
+
+  &:focus .production__play-icon {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
 
 
@@ -87,6 +120,7 @@
   }
 
   .production__video {
+    position: unset;
     height: 455px;
     order: 1;
     background-image: url("../img/video-tablet.jpg");
@@ -97,8 +131,7 @@
     }
   }
 
-  .production__title,
-  .production__order-wrapper {
+  .production__info-wrapper {
     order: 2;
   }
 
@@ -115,6 +148,10 @@
     }
   }
 
+  .production__title-text {
+    display: inline;
+  }
+
   .production__description {
     font-size: 15px;
     line-height: 30px;
@@ -124,7 +161,13 @@
   .production__order-wrapper {
     padding: 0 42px;
     padding-bottom: 45px;
+    margin-top: 0;
     border: none;
+  }
+
+  .production__title,
+  .production__order-wrapper {
+    outline: none;
   }
 
   .production__submit {
@@ -178,6 +221,7 @@
   .production__order-wrapper {
     @include second-row;
     align-items: unset;
+    padding-bottom: 59px;
   }
 
   .production__title,

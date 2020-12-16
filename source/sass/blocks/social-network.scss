@@ -7,6 +7,18 @@
   align-items: center;
 }
 
+.social-network__icon {
+  fill: $black;
+
+  &:hover {
+    fill: $footer-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .social-network {
     width: 140px;

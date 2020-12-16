@@ -8,6 +8,16 @@
   border-top: none;
 }
 
+.item__info-wrapper {
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .item__text-wrapper {
   padding-left: 28px;
   padding-bottom: 5px;
@@ -24,6 +34,14 @@
 .item__title-link {
   text-decoration: none;
   color: $black;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .item__photo,
@@ -73,15 +91,43 @@
   width: 20px;
   height: 19px;
   border: none;
+  outline: none;
   background-color: transparent;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+
+    .item__cart-icon {
+      fill: $light-green;
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+
+    .item__cart-icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.item__cart-icon {
+  fill: $black;
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
   .item {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 73px;
+    flex-direction: row;
     margin-top: 54px;
+  }
+
+  .item__info-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .item__title {
@@ -91,8 +137,6 @@
   }
 
   .item__text-wrapper {
-    @include second-column;
-    @include first-row;
     padding-left: 33px;
     border-top: 1px solid $shadow-gray;
   }
@@ -111,15 +155,8 @@
     height: 334px;
   }
 
-  .item__photo-link {
-    @include all-rows;
-    @include first-column;
-  }
-
   .item__order-wrapper {
-    @include second-column;
-    @include second-row;
-    width: 335px;
+    margin-top: auto;
     padding-left: 33px;
     padding-right: 32px;
 
@@ -137,7 +174,6 @@
 
 @media (min-width: $desktop-width) {
   .item {
-    display: flex;
     flex-direction: column;
     justify-content: unset;
   }
@@ -168,7 +204,6 @@
     padding-left: 27px;
     padding-top: 23px;
     padding-bottom: 25px;
-    margin-top: auto;
     width: 316px;
 
     &::before {

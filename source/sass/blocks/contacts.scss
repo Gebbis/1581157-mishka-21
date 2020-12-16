@@ -46,6 +46,34 @@
   margin: 0;
 }
 
+.contacts__info-definition-email {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 179px;
+    height: 1px;
+    left: 0;
+    bottom: 1px;
+    background-color: $line-green;
+  }
+
+  &:hover {
+    color: $footer-green;
+
+    &::after {
+      background-color: $footer-green;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
 .contacts__map {
   width: 100%;
   margin: 0 auto;
@@ -128,6 +156,14 @@
     width: 230px;
     margin-top: 50px;
   }
+
+
+  .contacts__info-definition-email {
+    &::after {
+      width: 100%;
+      bottom: -6px;
+    }
+  }
 }
 
 
@@ -196,5 +232,11 @@
     width: 527px;
     height: 457px;
     margin-top: 45px;
+  }
+
+  .contacts__info-definition-email {
+    &::after {
+      bottom: -10px;
+    }
   }
 }

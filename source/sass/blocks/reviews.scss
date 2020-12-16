@@ -82,6 +82,15 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 
   &--prev {
     background-image: url("../img/arrow-left.svg");
