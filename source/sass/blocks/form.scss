@@ -41,6 +41,12 @@
   margin-top: 7px;
 }
 
+.form__radio-input:focus + .form__radio,
+.form__checkbox-input:focus + .form__checkbox-label {
+  outline: 1px solid $black;
+  outline-offset: 25px;
+}
+
 .form__radio {
   position: relative;
   display: flex;

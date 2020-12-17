@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" crossorigin="anonymous" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" crossorigin="anonymous" as="font">
 </head>
 
 <body class="page__body">
@@ -183,16 +185,8 @@
           <dd class="contacts__info-definition">г. Санкт-Петербург <br> ул. Большая Конюшенная д. 19/8, офис 101</dd>
         </div>
       </dl>
-      <picture>
-        <source type="image/webp" media="(min-width: 1150px)"
-          srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-        <source media="(min-width: 1150px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-        <img class="contacts__map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="455"
-          alt="Схема проезда">
-      </picture>
+      <iframe class="contacts__map" src="https://yandex.by/map-widget/v1/-/CCUEjFvX1D" width="320" height="455"
+        style="position:relative;" aria-label="Схема проезда"></iframe>
       <a class="contacts__write-to-us button" href="#">
         Напишите нам
       </a>
@@ -274,7 +268,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 
 </body>
 
