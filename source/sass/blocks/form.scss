@@ -531,16 +531,19 @@
   }
 
   @media (min-width: $desktop-width) {
-    .form__annotation,
-    .form__order-wrapper {
+    .form__annotation {
       box-sizing: unset;
       padding: 0;
       margin: 0 auto;
       width: 700px;
+      margin-top: 97px;
     }
 
-    .form__annotation {
-      margin-top: 97px;
+    .form__order-wrapper {
+      width: 1250px;
+      padding-left: 225px;
+      padding-right: 325px;
+      margin-top: 19px;
     }
 
     .form__group-title {
@@ -605,10 +608,6 @@
       &--email {
         padding-right: 38px;
       }
-    }
-
-    .form__order-wrapper {
-      margin-top: 19px;
     }
 
     .form__radio-list,
