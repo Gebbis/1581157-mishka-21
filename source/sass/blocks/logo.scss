@@ -17,17 +17,19 @@
 
   &--footer {
     display: none;
+  }
+}
 
-    &-image {
-      fill: black;
+.logo__image {
+  &--footer {
+    fill: black;
 
-      &:hover {
-        fill: $footer-green;
-      }
+    &:hover {
+      fill: $footer-green;
+    }
 
-      &:active {
-        opacity: 0.3;
-      }
+    &:active {
+      opacity: 0.3;
     }
   }
 }

@@ -9,7 +9,6 @@
 @media (min-width: $tablet-width) {
   .page-header {
     @include header-grid-tablet;
-    min-height: 100px;
     padding: 0;
 
     &--index {
@@ -25,7 +24,6 @@
 @media (min-width: $desktop-width) {
   .page-header {
     @include header-grid-desktop;
-    width: unset;
     margin: 0 auto;
   }
 }
